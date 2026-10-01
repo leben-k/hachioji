@@ -111,3 +111,12 @@ for f,(p,s) in info.items():
     if "<svg" not in s: ic.append((f,"no svg"))
     if s.count('class="card"')!=s.count('<div class="card">\n<svg class="icon"') and f!="unei.html": ic.append((f,"card without icon"))
 print("ICON CHECK:", ic or "OK")
+# --- マップ連携点検 ---
+mp=info["map.html"]; mps=mp[1]
+mm=[]
+for i,sp in enumerate(SPOTS,1):
+    if f'href="#spot-{i}"' not in mps: mm.append(("pin link",i))
+    if f'id="spot-{i}"' not in mps: mm.append(("spot id",i))
+n=mps.count("google.com/maps/search/?api=1&query=")
+if n!=len(SPOTS): mm.append(("gmap links",n))
+print("MAP LINK CHECK:", mm or "OK")

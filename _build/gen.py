@@ -191,7 +191,7 @@ def build_map():
     pts = ""
     for i,s in enumerate(SPOTS,1):
         x,y = s[5]
-        pts += f'<g><circle cx="{x}" cy="{y}" r="11" fill="#B14C5D" stroke="#fff" stroke-width="2"/><text x="{x}" y="{y+4}" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">{i}</text></g>\n'
+        pts += f'<a href="#spot-{i}" class="pin" aria-label="{i}. {E(s[0])}の説明へ"><title>{i}. {E(s[0])}</title><circle cx="{x}" cy="{y}" r="13" fill="#B14C5D" stroke="#fff" stroke-width="2"/><text x="{x}" y="{y+4}" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">{i}</text></a>\n'
     deco = (_g("takao",24,300,0.6)+_g("jinba",16,150,0.9)+_g("sakura",186,292,0.7)+_g("ginkgo",296,252,0.6)+_g("ginkgo",212,110,0.6)
             +'<path d="M150 330 q60 -40 120 -20 q60 20 140 -40" stroke="#6FB1D6" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/><text x="300" y="318" font-size="11" fill="#3E7CA6" font-style="italic">浅川</text>'
             +'<g transform="translate(440 40)"><circle r="14" fill="#fff" stroke="#2F6690"/><path d="M0 -10 L4 4 L0 1 L-4 4Z" fill="#B14C5D"/><text y="26" font-size="10" text-anchor="middle" fill="#2F6690">N</text></g>')
@@ -207,11 +207,13 @@ def build_map():
 {pts}
 <text x="240" y="366" font-size="11" fill="#555" text-anchor="middle">※位置関係のイメージ略図です（縮尺・形状は正確ではありません）</text>
 </svg>'''
-    lst = "\n".join(f'<li><span class="num">{i}</span><div><strong>{E(s[0])}</strong><span class="place">{E(s[1])}</span><br>{E(s[2])}<br><span class="access">アクセス：{E(s[4])}</span></div></li>' for i,s in enumerate(SPOTS,1))
+    from urllib.parse import quote
+    def gmap(name): return "https://www.google.com/maps/search/?api=1&query=" + quote(name + " 八王子")
+    lst = "\n".join(f'<li id="spot-{i}"><span class="num">{i}</span><div><strong>{E(s[0])}</strong><span class="place">{E(s[1])}</span><br>{E(s[2])}<br><span class="access">アクセス：{E(s[4])}</span><br><a class="gmap-link" href="{gmap(s[0])}" target="_blank" rel="noopener noreferrer">Googleマップで見る &rarr;</a> <a class="back-link" href="#map-top">&uarr; 地図へ戻る</a></div></li>' for i,s in enumerate(SPOTS,1))
     body = f'''<section class="section">
 <div class="wrap">
-{head("Map","八王子 観光マップ","トップページで紹介した観光地の位置関係を、略図で確認できます。番号は下のスポット一覧と対応しています。")}
-<div class="map-wrap">
+{head("Map","八王子 観光マップ","トップページで紹介した観光地の位置関係を、略図で確認できます。地図上の番号をクリックすると、下のスポット説明に移動します。説明からはGoogleマップを開けます。")}
+<div class="map-wrap" id="map-top">
 {svg}
 </div>
 <ol class="spot-list">

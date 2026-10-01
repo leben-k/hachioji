@@ -105,3 +105,12 @@ img,svg{max-width:100%}
  .event-table tbody th{text-align:left;white-space:normal;display:flex;align-items:center;gap:8px}
  .event-table tbody th br{display:none}
 }
+/* ---- マップのリンク ---- */
+html{scroll-padding-top:90px}
+.map-svg .pin{cursor:pointer}
+.map-svg .pin circle{transition:r .15s}
+.map-svg .pin:hover circle,.map-svg .pin:focus circle{r:16;fill:#8B2F3F}
+.spot-list li:target{border-color:var(--rose);box-shadow:0 0 0 3px rgba(177,76,93,.25);background:#fff8f9}
+.gmap-link{display:inline-block;margin-top:6px;font-size:.85rem;font-weight:700;background:var(--ice);padding:3px 12px;border-radius:999px;text-decoration:none}
+.gmap-link:hover{background:var(--sky);color:#fff}
+.back-link{font-size:.78rem;margin-left:10px;color:var(--muted)}
