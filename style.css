@@ -1,0 +1,107 @@
+:root{--navy:#204A67;--blue:#2F6690;--sky:#3E7CA6;--gold:#C1892E;--rose:#B14C5D;--mint:#EAF4E7;--ice:#E8F4FA;--cream:#FBF6EA;--lav:#F1ECF8;--text:#23323C;--muted:#5b6b75}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--text);background:#fff;line-height:1.85;-webkit-text-size-adjust:100%}
+a{color:var(--blue)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.wrap.narrow{max-width:760px}
+.site-header{background:#fff;border-bottom:1px solid #dbe6ee;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:var(--navy)}
+.brand-icon{width:38px;height:38px;flex:none}
+.brand-sub{display:block;font-size:.68rem;font-weight:400;color:var(--muted)}
+.main-nav{display:flex;flex-wrap:wrap;gap:4px}
+.main-nav a{text-decoration:none;color:var(--navy);padding:6px 12px;border-radius:999px;font-size:.92rem}
+.main-nav a:hover,.main-nav a.active{background:var(--ice);font-weight:700}
+.hero{background:linear-gradient(180deg,var(--ice),#fff);padding:48px 0 28px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.eyebrow{display:inline-block;font-size:.8rem;color:var(--gold);font-weight:700;letter-spacing:.05em}
+.hero h1{font-size:2rem;line-height:1.4;color:var(--navy);margin:.3em 0}
+.hero p{color:var(--muted)}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 22px;border-radius:999px;margin:6px 8px 0 0;border:2px solid var(--blue);font-size:.95rem;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--navy);border-color:var(--navy)}
+.btn-outline{background:transparent;color:var(--blue)}
+.btn-outline:hover{color:#fff}
+.hero-art svg{width:100%;height:auto}
+.section{padding:48px 0}
+.alt-cream{background:var(--cream)}
+.alt-lavender{background:var(--lav)}
+.section-head{margin-bottom:24px}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--sky);padding:2px 12px;border-radius:999px}
+.section-head h2{margin:.4em 0 .2em;color:var(--navy);font-size:1.5rem}
+.section-head p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #dbe6ee;border-radius:14px;padding:18px 18px 16px;box-shadow:0 2px 6px rgba(32,74,103,.06)}
+.card h3{margin:.2em 0 .4em;color:var(--navy);font-size:1.05rem}
+.card p{margin:0;font-size:.92rem}
+.card .icon{width:48px;height:48px}
+.place{display:inline-block;font-size:.72rem;color:var(--rose);font-weight:700;margin-right:6px}
+.tags{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{background:var(--ice);color:var(--navy);font-size:.76rem;padding:2px 10px;border-radius:999px}
+.furusato-block{margin-top:28px;padding:16px;border:1px dashed var(--gold);border-radius:14px;background:#fffdf6}
+.furusato-label{display:block;font-size:.85rem;font-weight:700;color:var(--gold);margin-bottom:10px}
+.furusato-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.furusato-slot,.ad-slot{background:#fff;border:1px solid #e6dcc3;border-radius:10px;padding:10px;text-align:center}
+.slot-title,.ad-note{display:block;font-size:.72rem;color:var(--muted);margin-bottom:6px}
+.ad-label{display:inline-block;font-size:.68rem;background:#888;color:#fff;border-radius:4px;padding:0 6px;margin-right:6px}
+.ad-row{display:grid;grid-template-columns:1fr;gap:16px}
+.slot-placeholder{border:2px dashed #c9c9c9;color:#999;font-size:.8rem;padding:28px 8px;border-radius:8px}
+.ad-slot img,.furusato-slot img{max-width:100%;height:auto}
+.map-wrap{max-width:720px;margin:0 auto 24px}
+.map-svg{width:100%;height:auto;display:block}
+.spot-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.spot-list li{display:flex;gap:12px;background:#fff;border:1px solid #dbe6ee;border-radius:12px;padding:12px 14px}
+.num{flex:none;width:28px;height:28px;border-radius:50%;background:var(--rose);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.85rem}
+.access{font-size:.82rem;color:var(--muted)}
+.table-wrap{overflow-x:auto}
+.event-table,.info-table{width:100%;border-collapse:collapse;background:#fff}
+.event-table th,.event-table td,.info-table th,.info-table td{border:1px solid #dbe6ee;padding:10px 12px;text-align:left;vertical-align:top;font-size:.92rem}
+.event-table thead th{background:var(--ice);color:var(--navy)}
+.event-table tbody th{white-space:nowrap;background:#f7fafc;color:var(--navy)}
+.info-table th{width:9em;background:#f7fafc;color:var(--navy)}
+.note{font-size:.85rem;color:var(--muted);margin-top:20px}
+.sub-h{color:var(--navy);margin:36px 0 10px;border-left:5px solid var(--sky);padding-left:10px;font-size:1.1rem}
+.contact-form{display:grid;gap:14px;margin:16px 0}
+.contact-form label{display:grid;gap:4px;font-size:.9rem;font-weight:700;color:var(--navy)}
+.contact-form input,.contact-form textarea{font:inherit;padding:10px;border:1px solid #b9c9d4;border-radius:8px;width:100%}
+.site-footer{background:var(--navy);color:#cfe0ec;padding:36px 0 20px;font-size:.88rem}
+.site-footer a{color:#EAF4FA}
+.site-footer h4{color:#fff;margin:0 0 8px}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+.disclaimer{margin-top:22px;font-size:.76rem;line-height:1.7;color:#b5cbdb;border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
+.disclaimer strong{color:#EAF4FA}
+.copyright{margin-top:18px;text-align:center;font-size:.78rem;color:#9fb8ca}
+@media(max-width:760px){.hero .wrap,.footer-grid{grid-template-columns:1fr}.hero h1{font-size:1.6rem}.hero-art{order:-1}.main-nav a{padding:5px 9px;font-size:.85rem}}
+/* ---- イラスト関連 ---- */
+.card .icon{width:64px;height:64px;display:block;margin-bottom:6px}
+.icon.sm{width:44px;height:44px}
+.brand-icon{width:42px;height:42px}
+.orn{display:block;width:120px;height:20px;margin:6px 0 8px}
+.banner{line-height:0;border-bottom:1px solid #dbe6ee}
+.banner svg{width:100%;height:120px;display:block}
+.skyline{line-height:0;background:#fff}
+.skyline svg{width:100%;height:56px;display:block}
+.hero-art svg{filter:drop-shadow(0 6px 10px rgba(32,74,103,.12))}
+.card{transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 16px rgba(32,74,103,.12)}
+.event-table tbody th{text-align:center;min-width:5.5em}
+@media(max-width:760px){.banner svg{height:100px}}
+/* ---- 連絡先ページ・スマホ対応 ---- */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg{max-width:100%}
+.wrap.narrow.unei-box{max-width:680px}
+.unei-box .info-table,.unei-box .contact-form{width:100%;max-width:100%}
+.info-table td,.info-table th,.event-table td{overflow-wrap:anywhere;word-break:break-word}
+.form-note{margin:0;font-size:.9rem;color:var(--rose);font-weight:700}
+.contact-form input,.contact-form textarea{max-width:100%}
+@media(max-width:600px){
+ .info-table,.info-table tbody,.info-table tr,.info-table th,.info-table td{display:block;width:100%}
+ .info-table th{border-bottom:0}
+ .event-table,.event-table tbody,.event-table tr,.event-table th,.event-table td{display:block;width:100%}
+ .event-table thead{display:none}
+ .event-table tr{margin-bottom:12px;border:1px solid #dbe6ee;border-radius:10px;overflow:hidden}
+ .event-table th,.event-table td{border:0}
+ .event-table tbody th{text-align:left;white-space:normal;display:flex;align-items:center;gap:8px}
+ .event-table tbody th br{display:none}
+}
