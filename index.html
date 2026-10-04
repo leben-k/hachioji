@@ -119,19 +119,11 @@
 </div>
 </div>
 <!-- ふるさと納税広告枠：観光地セクション -->
-<div class="furusato-block" id="furusato-kanko">
+<div class="furusato-block" id="furusato-kanko" hidden>
 <span class="furusato-label">ふるさと納税で応援する（八王子市の返礼品）</span>
 <div class="furusato-grid">
-<div class="furusato-slot" data-slot="furusato-1"><span class="slot-title">返礼品広告 1</span>
-<!-- ▼ furusato-1：ふるさと納税（八王子市）のアフィリエイトコードを貼り付け -->
-<div class="slot-placeholder">広告枠（furusato-1）</div>
-<!-- ▲ furusato-1 ここまで -->
-</div>
-<div class="furusato-slot" data-slot="furusato-2"><span class="slot-title">返礼品広告 2</span>
-<!-- ▼ furusato-2：ふるさと納税（八王子市）のアフィリエイトコードを貼り付け -->
-<div class="slot-placeholder">広告枠（furusato-2）</div>
-<!-- ▲ furusato-2 ここまで -->
-</div>
+<div class="furusato-slot" data-ad-slot="furusato1" hidden><span class="ad-label">広告</span><div class="ad-body"></div></div>
+<div class="furusato-slot" data-ad-slot="furusato2" hidden><span class="ad-label">広告</span><div class="ad-body"></div></div>
 </div>
 </div>
 </div>
@@ -179,14 +171,10 @@
 </div>
 </div>
 <!-- ふるさと納税広告枠：特産品セクション -->
-<div class="furusato-block" id="furusato-tokusan">
+<div class="furusato-block" id="furusato-tokusan" hidden>
 <span class="furusato-label">ふるさと納税で取り寄せる（八王子市の特産品）</span>
 <div class="furusato-grid">
-<div class="furusato-slot" data-slot="furusato-3"><span class="slot-title">返礼品広告 3</span>
-<!-- ▼ furusato-3：ふるさと納税（八王子市）のアフィリエイトコードを貼り付け -->
-<div class="slot-placeholder">広告枠（furusato-3）</div>
-<!-- ▲ furusato-3 ここまで -->
-</div>
+<div class="furusato-slot" data-ad-slot="furusato3" hidden><span class="ad-label">広告</span><div class="ad-body"></div></div>
 </div>
 </div>
 </div>
@@ -228,19 +216,16 @@
 </div>
 </section>
 
-<section class="section alt-lavender">
+<section class="section alt-lavender" hidden>
 <div class="wrap">
 <div class="section-head">
 <span class="tag">PR</span>
 <h2>広告</h2>
 </div>
 <div class="ad-row">
-<div class="ad-slot" data-slot="ad-index-1">
+<div class="ad-slot" data-ad-slot="ad1" hidden>
 <span class="ad-label">広告</span>
-<span class="ad-note">広告 1</span>
-<!-- ▼ ad-index-1：アフィリエイトのリンクコードをここに貼り付け（a タグには rel="nofollow sponsored noopener" target="_blank" を付ける） -->
-<div class="slot-placeholder">広告枠（ad-index-1）</div>
-<!-- ▲ ad-index-1 ここまで -->
+<div class="ad-body"></div>
 </div>
 </div>
 </div>
@@ -290,5 +275,6 @@ var el = document.getElementById('copyright-text');
 if (el) { el.textContent = '\u00A9 ' + yearText + ' はちおうじ往来'; }
 })();
 </script>
+<script src="ads.js" defer></script>
 </body>
 </html>

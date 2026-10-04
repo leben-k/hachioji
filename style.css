@@ -114,3 +114,10 @@ html{scroll-padding-top:90px}
 .gmap-link{display:inline-block;margin-top:6px;font-size:.85rem;font-weight:700;background:var(--ice);padding:3px 12px;border-radius:999px;text-decoration:none}
 .gmap-link:hover{background:var(--sky);color:#fff}
 .back-link{font-size:.78rem;margin-left:10px;color:var(--muted)}
+
+/* ---- 広告表示（ads.js 用） ---- */
+[hidden]{display:none !important}
+.ad-body{text-align:center}
+.ad-body img{max-width:100%;height:auto}
+.ad-slot[data-rendered],.furusato-slot[data-rendered]{border-style:solid}
+.furusato-slot .ad-label{margin-bottom:6px}
