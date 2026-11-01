@@ -100,6 +100,8 @@ def bottom_ad(page_key):
 </section>'''
 
 BANNER_KIND={'map.html':'map','matsuri.html':'matsuri','areas.html':'areas','shukuhaku.html':'shukuhaku','unei.html':'unei'}
+PR_NOTE = '<!-- PR表記（ステマ規制・楽天アフィリエイトの規約対応） -->\n<div class="pr-top" role="note" style="background:#fff;border-bottom:1px solid #e6dfd2;"><p style="max-width:1100px;margin:0 auto;padding:7px 16px;text-align:left;font-size:14px;line-height:1.6;color:#333;font-weight:500;"><b style="display:inline-block;background:#8a3a1d;color:#fff;border-radius:4px;padding:0 8px;margin-right:8px;font-size:12px;line-height:1.7;vertical-align:1px;">PR</b>このページには広告を含みます</p></div>\n'
+
 def page(fname, title, desc, active, body):
     if fname in BANNER_KIND: body = banner(BANNER_KIND[fname]) + '\n' + body
     canonical = SITE_URL + ("" if fname=="index.html" else fname)
@@ -117,7 +119,7 @@ def page(fname, title, desc, active, body):
 </head>
 <body>
 {header(active)}
-{body}
+{PR_NOTE if 'data-ad-slot' in body else ''}{body}
 {footer()}
 </body>
 </html>
